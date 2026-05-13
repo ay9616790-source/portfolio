@@ -1,13 +1,11 @@
-import React from 'react';
 import SkillsSphere from '../components/SkillsSphere';
 
 export default function About() {
   return (
-    <div className="page">
-      <section className="section">
+    <section className="section">
         <div className="section-header fade-in">
           <p className="section-label">Who I Am</p>
-          <h1 className="section-title">About Me</h1>
+          <h2 className="section-title">About Me</h2>
           <div className="section-line"></div>
         </div>
 
@@ -57,7 +55,6 @@ export default function About() {
             <SkillsSphere />
           </div>
         </div>
-      </section>
-    </div>
+    </section>
   );
 }

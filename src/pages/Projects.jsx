@@ -1,61 +1,42 @@
-import React from 'react';
+
 
 const projects = [
   {
-    icon: '🤖',
-    title: 'AI Chatbot',
-    description: 'An intelligent chatbot powered by NLP that understands context and responds to natural language queries with high accuracy.',
-    tags: ['Python', 'NLP', 'TensorFlow'],
+    icon: '⏱️',
+    title: 'Project Management Time Tracker',
+    description: 'Engineered a desktop application with role-based access control supporting 3 user roles (Admin, PM, Team Member) for task assignment, time logging, and progress monitoring. Implemented DAO and service layers following the MVC pattern, with an embedded H2 database handling 10+ CRUD operations and real-time data visualization charts.',
+    tags: ['Java', 'JavaFX 21', 'Maven', 'H2 Database', 'FXML'],
     accentColor: '#ef4444',
-  },
-  {
-    icon: '🖼️',
-    title: 'Image Classifier',
-    description: 'Deep learning model using Convolutional Neural Networks to classify images, trained on custom datasets with data augmentation techniques.',
-    tags: ['Python', 'CNN', 'OpenCV'],
-    accentColor: '#f97316',
+    github: 'https://github.com/ay9616790-source',
   },
   {
     icon: '🌐',
     title: '3D Portfolio Website',
-    description: 'This interactive 3D portfolio built with React Three Fiber, featuring a floating island, animated elements, and smooth transitions.',
-    tags: ['React', 'Three.js', 'Framer Motion'],
-    accentColor: '#ef4444',
-  },
-  {
-    icon: '📊',
-    title: 'Data Visualization Dashboard',
-    description: 'Interactive analytics dashboard that transforms complex datasets into intuitive charts and graphs for actionable business insights.',
-    tags: ['Python', 'Pandas', 'Matplotlib'],
+    description: 'Built a responsive 3D portfolio website using React.js and Three.js, rendering WebGL scenes with smooth animations and glassmorphism UI components. Integrated a contact form and social media APIs, achieving optimized page load times under 3 seconds across devices.',
+    tags: ['React.js', 'Three.js', 'JavaScript', 'HTML5', 'CSS3'],
     accentColor: '#f97316',
+    github: 'https://github.com/ay9616790-source',
   },
   {
-    icon: '🧠',
-    title: 'Sentiment Analyzer',
-    description: 'ML-powered tool that analyzes social media text to determine emotional tone and sentiment with over 90% accuracy.',
-    tags: ['Python', 'NLTK', 'Scikit-Learn'],
+    icon: '🎙️',
+    title: 'Voice Command Calculator',
+    description: 'Developed a voice-activated calculator leveraging the Web Speech API, enabling hands-free arithmetic operations through natural language processing.',
+    tags: ['JavaScript', 'HTML5', 'CSS3', 'Web Speech API'],
     accentColor: '#ef4444',
-  },
-  {
-    icon: '🔍',
-    title: 'Object Detection System',
-    description: 'Real-time object detection using YOLO architecture, capable of identifying and tracking multiple objects in video streams.',
-    tags: ['Python', 'YOLO', 'OpenCV'],
-    accentColor: '#f97316',
+    github: 'https://github.com/ay9616790-source',
   },
 ];
 
 export default function Projects() {
   return (
-    <div className="page">
-      <section className="section">
+    <section className="section">
         <div className="section-header fade-in">
           <p className="section-label">My Work</p>
-          <h1 className="section-title">Projects</h1>
+          <h2 className="section-title">Projects</h2>
           <div className="section-line"></div>
           <p className="section-desc">
-            A curated selection of projects showcasing my work in AI, machine learning, 
-            and creative web development.
+            A curated selection of projects showcasing my work in full-stack development, 
+            desktop application engineering, and creative web experiences.
           </p>
         </div>
 
@@ -86,7 +67,6 @@ export default function Projects() {
             </div>
           ))}
         </div>
-      </section>
-    </div>
+    </section>
   );
 }

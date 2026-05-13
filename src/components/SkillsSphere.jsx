@@ -145,12 +145,14 @@ export default function SkillsSphere() {
   return (
     <div style={{
       width: '100%',
-      height: '550px',
+      maxWidth: '100%',
+      height: 'clamp(260px, 60vw, 550px)',
       position: 'relative',
+      overflow: 'hidden',
     }}>
       <Canvas
         camera={{ position: [0, 0, 10], fov: 50 }}
-        style={{ background: 'transparent' }}
+        style={{ background: 'transparent', overflow: 'hidden' }}
       >
         <ambientLight intensity={0.5} />
         <directionalLight position={[10, 10, 5]} intensity={1} />

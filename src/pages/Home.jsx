@@ -1,8 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 import Scene from '../components/Scene';
+import resumePdf from '../components/Resume/resume (5).pdf';
+
 
 const tags = ['Python', 'TensorFlow', 'Machine Learning', 'React', 'Three.js', 'Deep Learning'];
+
+const scrollTo = (e, id) => {
+  e.preventDefault();
+  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+};
 
 export default function Home() {
   return (
@@ -31,12 +36,15 @@ export default function Home() {
         </div>
 
         <div className="home-cta fade-in fade-in-delay-4">
-          <Link to="/projects" className="btn-primary">
+          <a href="#projects" onClick={(e) => scrollTo(e, 'projects')} className="btn-primary">
             View Projects →
-          </Link>
-          <Link to="/contact" className="btn-secondary">
+          </a>
+          <a href="#contact" onClick={(e) => scrollTo(e, 'contact')} className="btn-secondary">
             Get in Touch
-          </Link>
+          </a>
+          <a href={resumePdf} target="_blank" rel="noopener noreferrer" className="btn-secondary" style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+            📄 Resume
+          </a>
         </div>
       </div>
 
